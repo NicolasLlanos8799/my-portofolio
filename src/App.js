@@ -1,23 +1,33 @@
-// src/App.js
+// App.js
 import React from 'react';
-import './App.css'; // Importa el archivo de estilos CSS
+import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './Home';
+import AboutMe from './AboutMe';
+import Contact from './Contact';
+import MyWorks from './MyWorks';
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-        <ul>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <header>
-        <h1>DESARROLLADOR WEB DESARROLLADOR DE APLICACIONES MÓVILES IOS</h1>
-        <p>Hola!Mi nombre es Nicolas Llanos</p>
-        <p>Tecnico en desarrollo de software</p>
-        <p>Trabajando como desarrollador freelance</p>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about-me">About Me</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/my-works">My Works</Link></li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/my-works" element={<MyWorks />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
