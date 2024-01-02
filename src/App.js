@@ -12,12 +12,17 @@ function App() {
     <Router>
       <div>
         <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about-me">About Me</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/my-works">My Works</Link></li>
-          </ul>
+          <div className="nav-left">
+            <p>Nicolas Llanos</p>
+          </div>
+          <div className="nav-right">
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about-me">About Me</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/my-works">My Works</Link></li>
+            </ul>
+          </div>
         </nav>
 
         <Routes>
