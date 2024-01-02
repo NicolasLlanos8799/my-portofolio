@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
+/* src/App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black; /* Fondo negro para la página */
+  color: white; /* Color de texto blanco */
+  height: 100vh; /* 100% de la altura de la ventana */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+.App {
+  text-align: center;
+  flex: 1; /* Ocupa todo el espacio restante */
+}
+
+nav {
+  position: fixed; /* Fija la barra de navegación en la parte superior */
+  top: 0;
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  background-color: #333; /* Color de fondo para la barra de navegación */
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
   color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  margin-top: 50px;
+  text-align: left; /* Alinea el texto a la izquierda */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 7vw;
+  margin-bottom: 10px;
+  font-family: 'Clash-Medium', sans-serif;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 5px 0; /* Añade un pequeño espacio entre los párrafos */
+}
+
+/* Estilo específico para los párrafos dentro del header */
+header p {
+  font-size: 1em; /* Tamaño de fuente más pequeño para estos párrafos */
 }

@@ -1,22 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import './App.css'; // Importa el archivo de estilos CSS
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <header>
+        <h1>DESARROLLADOR WEB DESARROLLADOR DE APLICACIONES MÓVILES IOS</h1>
+        <p>Hola!Mi nombre es Nicolas Llanos</p>
+        <p>Tecnico en desarrollo de software</p>
+        <p>Trabajando como desarrollador freelance</p>
       </header>
     </div>
   );
