@@ -23,10 +23,11 @@ body {
 }
 
 nav {
-  position: fixed; /* Fija la barra de navegación en la parte superior */
+  position: fixed;
   top: 0;
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
-  background-color: black; /* Color de fondo para la barra de navegación */
+  left: 0; /* Asegura que la barra de navegación comience desde el borde izquierdo */
+  width: 100%;
+  background-color: black;
   padding: 10px;
   display: flex;
   justify-content: space-between;
