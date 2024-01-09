@@ -1,35 +1,42 @@
 /* src/App.css */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black; /* Fondo negro para la página */
-  color: white; /* Color de texto blanco */
-  height: 100vh; /* 100% de la altura de la ventana */
+  background-color: black;
+  color: white;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+  overflow-x: hidden;
 }
 
 .App {
   text-align: center;
-  flex: 1; /* Ocupa todo el espacio restante */
+  flex: 1;
+  width: 100%;
 }
 
 nav {
   position: fixed;
   top: 0;
-  left: 0; /* Asegura que la barra de navegación comience desde el borde izquierdo */
+  left: 0;
   width: 100%;
   background-color: black;
   padding: 10px;
   display: flex;
+  align-items: center; /* Alinea verticalmente */
   justify-content: space-between;
 }
 
@@ -43,22 +50,34 @@ nav {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center; /* Alinea verticalmente */
   justify-content: flex-end;
 }
 
 .nav-right li {
   margin: 0 15px;
+  position: relative; /* Añade esta línea */
 }
 
 .nav-right a {
   color: white;
   text-decoration: none;
-  font-size: 16px; /* Tamaño de fuente más pequeño */
+  font-size: 16px;
+}
+
+.nav-right li::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
 }
 
 header {
   margin-top: 50px;
-  text-align: left; /* Alinea el texto a la izquierda */
+  text-align: left;
 }
 
 h1 {
@@ -71,10 +90,53 @@ h1 {
 
 p {
   font-size: 1.2em;
-  margin: 5px 0; /* Añade un pequeño espacio entre los párrafos */
+  margin: 5px 0;
 }
 
-/* Estilo específico para los párrafos dentro del header */
 header p {
-  font-size: 1em; /* Tamaño de fuente más pequeño para estos párrafos */
+  font-size: 1em;
+}
+
+.burger-menu {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.burger-menu:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  left: 0;       
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.mobile-menu li {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.mobile-menu li:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
 }
