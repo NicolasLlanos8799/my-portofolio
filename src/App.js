@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import AboutMe from './AboutMe';
-import Contact from './Contact';
-import MyWorks from './MyWorks';
+import Home from './Pages/Home';
+import AboutMe from './Pages/AboutMe';
+import Contact from './Pages/Contact';
+import MyWorks from './Pages/MyWorks';
 import '@fortawesome/fontawesome-free/css/all.css'; // Importa los estilos de FontAwesome
 
 function App() {
